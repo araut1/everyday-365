@@ -13,4 +13,4 @@ With this repo, I am going to solve new coding problems each day and I will trac
 
 My Goal:
 
-![Alt Text](https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif
+![Alt Text](https://github.com/{user}/{repo}/raw/master/path/to/image.gif)
