@@ -14,4 +14,4 @@ With this repo, I am going to solve new coding problems each day and I will trac
 
 My Goal:
 
-![Alt Text](http://www.sheawong.com/wp-content/uploads/2013/08/keephatin.gif)
+![Alt Text](https://media.giphy.com/media/8PBHolXjrUV7DuRtbG/giphy.gif)
