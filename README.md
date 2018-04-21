@@ -14,4 +14,4 @@ With this repo, I am going to solve new coding problems each day and I will trac
 
 My Goal:
 
-![Alt Text](https://gph.is/2IVUoSX)
+![Alt Text](https://github.com/araut1/everyday-365/blob/master/giphy.gif)
