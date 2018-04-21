@@ -14,4 +14,4 @@ With this repo, I am going to solve new coding problems each day and I will trac
 
 My Goal:
 
-![Alt Text](https://media.giphy.com/media/8PBHolXjrUV7DuRtbG/giphy.gif)
+![Alt Text](https://gph.is/2IVUoSX)
