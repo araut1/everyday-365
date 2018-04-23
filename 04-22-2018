@@ -1,0 +1,49 @@
+// practiced SQL query using oracle
+
+select *
+from CITY 
+where POPULATION > 100000 and ID != 6;
+
+
+select NAME
+from CITY 
+where POPULATION > 120000 and ID != 6;
+
+
+select *
+from CITY 
+;
+
+select *
+from CITY 
+where ID = 1661
+;
+
+select *
+from CITY 
+where COUNTRYCODE  = 'JPN'
+;
+
+
+select NAME
+from CITY 
+where COUNTRYCODE  = 'JPN'
+;
+
+
+select CITY, STATE
+from STATION 
+;
+
+
+SELECT DISTINCT CITY
+FROM STATION
+WHERE MOD(ID, 2) = 0;
+
+
+
+
+
+
+
+
