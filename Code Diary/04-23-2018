@@ -14,3 +14,51 @@ int main() {
 }
 
 
+int main() {
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */   
+    int a,b,c;
+    cin>>a;
+    cin>>b;
+    cin>>c;
+    cout<<a+b+c;
+    return 0;
+}
+
+
+int main() {
+    // Complete the code.
+    int a=3;
+    long b = 12345678912345;
+    char c = 'a';
+    float d= 334.23;
+    double e = 14049.30493;
+    
+    cout<<a<<endl;
+    cout<<b<<endl;
+    cout<<c<<endl;
+    cout<<d<<endl;
+    cout<<e;
+    
+    
+    
+    return 0;
+}
+
+int main() {
+    // Complete the code.
+    int a=3;
+    long b = 12345678912345;
+    char c = 'a';
+    float d= 334.23;
+    double e = 14049.30493;
+    
+    cout<<a<<endl;
+    cout<<b<<endl;
+    cout<<c<<endl;
+    cout<<d<<endl;
+    cout<<e;
+    
+    
+    
+    return 0;
+}
