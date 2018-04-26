@@ -1,5 +1,4 @@
-// C program to find length of
-// the shortest supersequence
+// C program to find length of the shortest supersequence
 #include<stdio.h>
 #include<string.h>
  
