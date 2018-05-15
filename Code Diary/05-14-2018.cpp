@@ -1,4 +1,4 @@
-// C program to reverse a string using stack
+// 
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
