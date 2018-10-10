@@ -31,7 +31,7 @@ public class Solution {
 
         int[] nums = new int[index];
 
-        System.out.println("Array Size: " + nums.length);
+        System.out.println("\nArray Size: " + nums.length);
 
         for (int i = 0; i < nums.length; i++) {
             nums[i] = sc.nextInt();
@@ -41,23 +41,43 @@ public class Solution {
         System.out.println("\nArray: ");
         System.out.println(Arrays.toString(nums));
 
+
+        // mean
         for (int i = 0; i < nums.length; i++) {
             sum += nums[i];
         }
         mean = sum / (nums.length);
 
+
+        //median
         if ((nums.length % 2) == 0) {
 
             pos = (nums.length / 2);
-            median =  (nums[pos] + nums[pos-1]) / 2.0;
+            median = (nums[pos] + nums[pos - 1]) / 2.0;
         } else {
             pos = (int) Math.floor(nums.length / 2.0);
-            median =  nums[pos];
+            median = nums[pos];
         }
 
-        mode =0;
+        // mode
+        mode = nums[0];
+        int countMode = 1;
 
-        System.out.println("Mean: "+ mean+" Median: "+ median+" Mode: "+ mode);
+        for (int current : nums) {
+            int count = 0;
+            for (int element : nums) {
+                if (current == element) {
+                    count++;
+                }
+            }
+            if (count > countMode) {
+                mode = current;
+                countMode = count;
+            }
+        }
+
+
+        System.out.println("Mean: " + mean + " Median: " + median + " Mode: " + mode);
 
 
     }
