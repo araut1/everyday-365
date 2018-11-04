@@ -1,4 +1,4 @@
- // A Dynamic Programming based solution to compute nCr % p
+ // A Dynamic Programming based solution to compute nCr % p (Permu - combi)
 #include<bits/stdc++.h>
 using namespace std;
  
