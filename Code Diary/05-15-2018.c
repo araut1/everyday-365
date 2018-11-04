@@ -1,4 +1,4 @@
-// A Naive Recursive Implementation
+// A Naive Recursive Implementation for bionomial
 #include<stdio.h>
  
 // Returns value of Binomial Coefficient C(n, k)
