@@ -11,40 +11,22 @@ public class Solution {
     // Complete the sockMerchant function below.
     static int sockMerchant(int n, int[] ar) {
     
-
-    
-    
-        ArrayList<Integer> a = new ArrayList<Integer>(n);
-       
-        int c =0;
-  
-        for(int x: ar)
+int c=0;
+        Arrays.sort(ar);
+        
+        for(int i=0; i < n-1;i++)
         {
-            a.add(x);
-        }
-              
-
-        for (int i = 0; i < a.size(); i++) {
-
-          for (int j = i+1; j < a.size(); j++) {
+          if(ar[i] == ar[i+1])
+          {
+            c++;
+            i+=1;
             
-           
-            if(a.get(i) == a.get(j))
-            {
-              c++;
-              a.remove(i);
-              a.remove(j-1);
-              i=0;
-              j=i+1;
-
-            }
-
           }
           
-
         }
-       return c;
+       
 
+      return c;
     }
 
     private static final Scanner scanner = new Scanner(System.in);
