@@ -37,9 +37,9 @@ public class Solution {
         n/=t;
         z/=t;
         
-        System.out.printf("%f\n",p);
-        System.out.printf("%f\n",n);
-        System.out.printf("%f\n",z);
+        System.out.printf("%.6f\n",p);
+        System.out.printf("%.6f\n",n);
+        System.out.printf("%.6f\n",z);
 
 
     }
