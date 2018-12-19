@@ -9,19 +9,18 @@ import java.util.regex.*;
 public class Solution {
 
     // Complete the taumBday function below.
-    static int taumBday(int b, int w, int bc, int wc, int z) {
 
 
+  static long taumBday( long b, long w, long bc, long wc, long z) {
 
-
-      int[] costCombi = new int[3];
+        long[] costCombi = new long[3];
         // index: 0 -> no conversion; 1-> black to white conversion; 2-> white to black conversion
-        int t = b + w;
+        long t = b + w;
 
         // no conversion
         costCombi[0] = b * bc + w * wc;
 
-      // b to w
+        // b to w
         costCombi[1] = t * bc + w * z;
 
         // w to b
@@ -29,9 +28,17 @@ public class Solution {
 
         Arrays.sort(costCombi);
         return costCombi[0];
-
-
     }
+
+
+
+
+
+
+
+
+
+
 
     private static final Scanner scanner = new Scanner(System.in);
 
@@ -56,7 +63,7 @@ public class Solution {
 
             int z = Integer.parseInt(bcWcz[2]);
 
-            int result = taumBday(b, w, bc, wc, z);
+            long result = taumBday(b, w, bc, wc, z);
 
             bufferedWriter.write(String.valueOf(result));
             bufferedWriter.newLine();
