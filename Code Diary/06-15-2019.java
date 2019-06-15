@@ -18,8 +18,6 @@ public class Solution {
 
 
 
-
-
     int[] temp = new int[a.length];
         int tempPos =0;
 
@@ -39,7 +37,6 @@ public class Solution {
 
 
         return temp;
-
 
 
 
