@@ -2,39 +2,58 @@ import java.util.*;
 
 class Solution {
 
-    static int countPairsWithDiffK(List<Integer> numbers, int k)
-    {
-        int ans = 0;
-        int len = numbers.size();
+    static public boolean backspaceCompare(String S, String T) {
 
-        // sort numbers
-        Collections.sort(numbers);
-
-        int left = 0;
-        int right = 0;
+        Stack<Character> s = new Stack<>();
+        Stack<Character> t = new Stack<>();
 
 
+        // S
+        for (int i = 0; i < S.length(); i++) {
 
-        while(right < len)
-        {
-            if(numbers.get(right)- numbers.get(left) == k)
-            {
-                ans++;
-                left++;
-                right++;
+            char c = S.charAt(i);
+
+            if(c == '#'){
+
+                if(s.size()!= 0){
+                    s.pop();
+                }
+            } else {
+                s.push(c);
             }
-            else if(numbers.get(right)- numbers.get(left) > k)
-                left++;
-            else
-                right++;
         }
-        return ans;
-    }
-    public static void main(String[] args) {
 
-        int[] input = new int[]{2, 3, 6, 7};
-//        int[][] input = new int[][]{{1, 0}, {0, 1}};
-//        Node root = null;
+
+        // T
+        for (int i = 0; i < T.length(); i++) {
+            char c = T.charAt(i);
+
+            if(c == '#'){
+
+                if(t.size()!= 0){
+                    t.pop();
+                }
+            } else {
+                t.push(c);
+            }
+        }
+
+        // check
+        if(s.size() != t.size()){
+            return false;
+        }
+
+        for (int i = 0; i < s.size(); i++) {
+            if(s.pop() != t.pop()){
+                return false;
+            }
+        }
+        return true;
+    }
+
+
+    public static void main(String[] args) {
+        System.out.println(backspaceCompare("a##c","#a#c"));
 
     }
 
