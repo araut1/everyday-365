@@ -2,53 +2,69 @@ import java.util.*;
 
 class Solution {
 
-    static public boolean backspaceCompare(String S, String T) {
+  
 
-        Stack<Character> s = new Stack<>();
-        Stack<Character> t = new Stack<>();
+  int min = Integer.MAX_VALUE;
+
+    Stack<Integer> stack;
+    Stack<Integer> minstack;
+
+    /**
+     * initialize your data structure here.
+     */
+    public MinStack() {
+        stack = new Stack<>();
+        minstack = new Stack<>();
 
 
-        // S
-        for (int i = 0; i < S.length(); i++) {
+    }
 
-            char c = S.charAt(i);
+ public void push(int x) {
 
-            if(c == '#'){
+        stack.push(x);
 
-                if(s.size()!= 0){
-                    s.pop();
+        if (x <= min) {
+            minstack.push(x);
+            min = minstack.peek();
+
+        }
+
+
+    }
+
+    public void pop() {
+
+        if (!stack.isEmpty()) {
+            int temp = stack.peek();
+            stack.pop();
+
+            if (temp == minstack.peek()) {
+                minstack.pop();
+                if (!minstack.isEmpty()) {
+                    min = minstack.peek();
+                } else if(minstack.isEmpty()){
+                    min = Integer.MAX_VALUE;
                 }
-            } else {
-                s.push(c);
             }
         }
+    }
 
+    public int top() {
+        if (!stack.isEmpty()) {
+            return stack.peek();
+        } else {
+            return 0;
+        }
+    }
 
-        // T
-        for (int i = 0; i < T.length(); i++) {
-            char c = T.charAt(i);
+    public int getMin() {
 
-            if(c == '#'){
-
-                if(t.size()!= 0){
-                    t.pop();
-                }
-            } else {
-                t.push(c);
-            }
+        if (!minstack.isEmpty()) {
+            return minstack.peek();
+        } else {
+            return 0;
         }
 
-        // check
-        if(s.size() != t.size()){
-            return false;
-        }
-
-        for (int i = 0; i < s.size(); i++) {
-            if(s.pop() != t.pop()){
-                return false;
-            }
-        }
-        return true;
     }
 
 
