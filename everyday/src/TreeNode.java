@@ -7,25 +7,34 @@ public class TreeNode {
     TreeNode left;
     TreeNode right;
 
-    TreeNode(int x) {
-        val = x;
+    TreeNode() {
+    }
+
+    TreeNode(int val) {
+        this.val = val;
+    }
+
+    TreeNode(int val, TreeNode left, TreeNode right) {
+        this.val = val;
+        this.left = left;
+        this.right = right;
     }
 
     // BFS - level by level traversal
-    public static void print(TreeNode root) {
+    public static void printT(TreeNode root) {
         List<List<String>> res = new ArrayList<List<String>>();
 
         LinkedList<TreeNode> q = new LinkedList<>();
 
         q.add(root);
 
-        while(!q.isEmpty()){
+        while (!q.isEmpty()) {
 
             TreeNode node = q.remove();
 
-            if(node == null){
+            if (node == null) {
 
-            } else{
+            } else {
 
             }
 

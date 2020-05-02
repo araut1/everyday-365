@@ -2,75 +2,33 @@ import java.util.*;
 
 class Solution {
 
-  
 
-  int min = Integer.MAX_VALUE;
+    static public int numJewelsInStones(String J, String S) {
 
-    Stack<Integer> stack;
-    Stack<Integer> minstack;
+        Set<Character> j = new HashSet<>();
 
-    /**
-     * initialize your data structure here.
-     */
-    public MinStack() {
-        stack = new Stack<>();
-        minstack = new Stack<>();
-
-
-    }
-
- public void push(int x) {
-
-        stack.push(x);
-
-        if (x <= min) {
-            minstack.push(x);
-            min = minstack.peek();
-
+        for (int i = 0; i < J.length(); i++) {
+            j.add(J.charAt(i));
         }
 
+        int count=0;
+        for (int i = 0; i < S.length(); i++) {
+            char c = S.charAt(i);
 
-    }
-
-    public void pop() {
-
-        if (!stack.isEmpty()) {
-            int temp = stack.peek();
-            stack.pop();
-
-            if (temp == minstack.peek()) {
-                minstack.pop();
-                if (!minstack.isEmpty()) {
-                    min = minstack.peek();
-                } else if(minstack.isEmpty()){
-                    min = Integer.MAX_VALUE;
-                }
+            if(j.contains(c)){
+                count++;
             }
         }
-    }
 
-    public int top() {
-        if (!stack.isEmpty()) {
-            return stack.peek();
-        } else {
-            return 0;
-        }
-    }
 
-    public int getMin() {
 
-        if (!minstack.isEmpty()) {
-            return minstack.peek();
-        } else {
-            return 0;
-        }
-
+        return count;
     }
 
 
     public static void main(String[] args) {
-        System.out.println(backspaceCompare("a##c","#a#c"));
-
+        int[] arr = {};
+        System.out.println(numJewelsInStones( "aA","aAAbbbb"));
     }
 
 
