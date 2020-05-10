@@ -41,3 +41,98 @@ class Main {
         System.out.println(a);
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+import java.util.*;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+
+        Scanner scanner = new Scanner(System.in);
+
+
+        int U = scanner.nextInt();
+        int L = scanner.nextInt();
+        int C = scanner.nextInt();
+        int N = scanner.nextInt();
+
+
+        if(U==0 && L==0 && C==0 && N == 1){
+            System.out.println("!");
+            return;
+        }
+
+        StringBuilder sb = new StringBuilder(" ");
+
+        for (int i = 0; i < U; i++) {
+
+            char c = (char) ( (int)(Math.random() * 26) + 65);;
+            char f = sb.charAt(0);
+
+            while(c == f){
+                c = (char) ( (int)(Math.random() * 26) + 65);
+            }
+
+            sb.insert(0,c);
+
+        }
+
+
+        for (int i = 0; i < L; i++) {
+
+            char c = (char) ( (int)(Math.random() * 26) + 97);;
+            char f = sb.charAt(0);
+
+            while(c == f){
+                c = (char) ( (int)(Math.random() * 26) + 97);
+            }
+
+            sb.insert(0,c);
+
+        }
+
+        for (int i = 0; i < C; i++) {
+
+            char c = (char) ( (int)(Math.random() * 9) + 48);;
+            char f = sb.charAt(0);
+
+            while(c == f){
+                c = (char) ( (int)(Math.random() * 9) + 48);
+            }
+
+            sb.insert(0,c);
+
+        }
+
+
+        while (sb.length() != N+1){
+
+            char c = (char) ( (int)(Math.random() * 9) + 48);;
+            char f = sb.charAt(0);
+
+            while(c == f){
+                c = (char) ( (int)(Math.random() * 9) + 48);
+            }
+
+            sb.insert(0,c);
+
+        }
+
+
+        System.out.println(String.valueOf(sb).trim());
+    }
+}
